@@ -109,6 +109,46 @@ module.exports = {
     coin: coins.ZEC,
     isZcash: true
   },
+  zer: {
+    messagePrefix: '\x18ZCash Signed Message:\n',
+    bech32: 'bc',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 0x1cb8,
+    scriptHash: 0x1cbd,
+    wif: 0x80,
+    // This parameter was introduced in version 3 to allow soft forks, for version 1 and 2 transactions we add a
+    // dummy value.
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x6f76727a,
+      4: 0x7361707a
+    },
+    coin: coins.ZER,
+    isZcash: true
+  },
+  zet: {
+    messagePrefix: '\x18ZCash Signed Message:\n',
+    bech32: 'tb',
+    bip32: {
+      public: 0x043587cf,
+      private: 0x04358394
+    },
+    pubKeyHash: 0x1d25,
+    scriptHash: 0x1cba,
+    wif: 0xef,
+    consensusBranchId: {
+      1: 0x00,
+      2: 0x00,
+      3: 0x6f76727a,
+      4: 0x7361707a
+    },
+    coin: coins.ZET,
+    isZcash: true
+  },
   vrsc: {
     messagePrefix: '\x18Verus Coin Signed Message:\n',
     bech32: 'bc',
